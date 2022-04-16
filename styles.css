@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+:root{
+    --red:red;
+    --white:white;
+    --black:rgb(41, 41, 41);
+    --lightGray:gray;
+}
+
+.btn{
+    background-color: rgba(41, 41, 1,0);
+    width: 240px;
+    height: 50px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 16px;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+button[class^="btn"]{
+    padding: 0;
+}
+.btn:hover{
+    box-shadow: 0 0 5px ;
+}
+.btn-primary{
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+.btn-primary:hover{
+    box-shadow: 0 0 5px var(--red);
+}
+.btn-dark{
+    background-color: var(--lightGray);
+}
+
+
+
+.header{
+    position: relative;
+    color: var(--white);
+}
+.header img{
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+.navbar .logo{
+    font-size: 20px;
+}
+
+.nav ul{
+    display: flex;
+    align-items: center;
+}
+.nav li{
+    display: inline-block;
+    padding: 0 14px;
+}
+.banner{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    font-size: 25px;
+    width: 40%;
+}
+.banner p{
+    width: 90%;
+    font-size: 14px;
+    margin: 16px 0;
+}
+.card-contnet{
+    position: relative;;
+}
+.card-contnet > img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.card{
+    background-color: var(--white);
+    position: relative;
+    width: 20%;
+    height: 360px;
+    top: -400px;
+    left: 15%;
+    display: inline-block;
+    margin: 0 10px;
+}
+.card .card-body{
+    padding: 20px;
+    color: var(--lightGray);
+}
+.card-img img{
+   width: 100%;
+   object-fit: cover;
+}
+#see_other{
+    position: relative;
+    top: -385px;
+    left: 200px;
+}
+#see_other p{
+    display: inline-block;
+    margin: 0 30px;
+}
+.about{
+    position: relative;
+    width: 60%;
+    left: 230px;
+    top: -300px;
+    text-align: center;
+}
