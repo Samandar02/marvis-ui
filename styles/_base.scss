@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Kanit:ital,wght@1,100&family=Signika:wght@600&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 p,a{
-    font-size: 20px;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
@@ -22,10 +23,16 @@ a{
     margin: 0 12%;
 }
 .container-md-not-left{
-    margin: 0 3% 0 12%;
+    margin: 0 3% 0 20%;
+    @include responsive(t){
+        margin: 0 3% 0 10%;
+    }
 }
 .container-md-not-right{
-    margin: 0 15% 0 3%;
+    margin: 0 20% 0 3%;
+    @include responsive(t){
+        margin: 0 10% 0 3%;
+    }
 }
 .btn{
     transition: .3s ease-in;
@@ -68,7 +75,6 @@ a{
         &:hover{
             box-shadow: none;
             background-color: transparent;
-            border: 1px solid;
             color: rgb(15 51 75);
         }
     }
@@ -84,6 +90,9 @@ footer{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include responsive(lm){
+            flex-direction: column;
+        }
         .about, .others{
             width: 300px;
         }

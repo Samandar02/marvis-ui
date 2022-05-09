@@ -1,4 +1,60 @@
-$white:rgb(252, 252, 252);
-$almostBlack:rgb(78, 78, 78);
-$black:rgb(27, 27, 27);
-$red:rgb(255, 36, 36);
+$white: rgb(252, 252, 252);
+$almostBlack: rgb(78, 78, 78);
+$black: rgb(27, 27, 27);
+$red: rgb(255, 36, 36);
+
+@mixin responsive($type) {
+    @if $type == m  {
+        @media (max-width:320px) {
+            @content;
+        }
+    }
+
+    @if $type == lm {
+
+        @media (max-width:426px) {
+            @content;
+        }
+    }
+
+    @if $type ==t  {
+
+        @media (max-width:769px) {
+            @content;
+        }
+    }
+
+    @if $type ==l {
+        @media (max-width:1025px) {
+            @content;
+        }
+    }
+
+}
+
+@mixin responsive2($breakpoint) {
+    @if $breakpoint ==phone {
+
+        @media (max-width: 576px) {
+            @content
+        };
+    }
+    @if $breakpoint ==tab {
+
+        @media (max-width: 768px) {
+            @content
+        };
+    }
+    @if $breakpoint ==desktop {
+
+        @media (max-width: 992px) {
+            @content
+        };
+    }
+    @if $breakpoint ==lg-desktop {
+
+        @media (max-width: 1200px) {
+            @content
+        };
+    }
+}
